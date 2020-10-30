@@ -1,0 +1,66 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Repuestos</h1>
+  <p class="mb-4">lista todolos los repuestos que se le han puesto a un vehiculo. llama datos importantes del mantenimiento y del proveedor. nombre marca y demas</a>.</p>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <a href="repuesto/add" class="btn btn-success">Nuevo</a>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Marca</th>
+              <th>Referencia</th>
+              <th>Proveedor</th>
+              <th>Precio</th>
+              <th>Obsevaciones</th>
+              <th>::</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Nombre</th>
+              <th>Marca</th>
+              <th>Referencia</th>
+              <th>Proveedor</th>
+              <th>Precio</th>
+              <th>Obsevaciones</th>
+              <th>::</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              {{#each repuesto}}
+              <tr>
+                <td>{{nombre}}</td>
+                <td>{{marca}}</td>
+                <td>{{referencia}}</td>
+                <td>{{proveedor}}</td>
+                <td>${{number precio}}</td>
+                <td>{{observaciones}}</td>
+                <td>
+                  <a href="repuesto/delete/{{id}}" class="btn btn-danger" alt="Eliminar"><i class="fas fa-trash"></i></a>
+                  <a href="repuesto/update/{{id}}" class="btn btn-info" alt="Editar"><i class="fas fa-edit"></i></a>
+                </td>
+              </tr>
+              {{/each}}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /.container-fluid -->

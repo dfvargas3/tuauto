@@ -1,0 +1,85 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-bady">
+                    <form action="" method="post">
+                        <div class="form-group">
+                        <label for="">registrar</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Id</label>
+                            <input class="form-control" type="text" name="id" id="">
+                        </div>
+                        <div class="form-group">
+                            <label>Usuario</label>
+                            <input class="form-control" type="text" name="usuario" id="">
+                        </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input class="form-control" type="password" name="contrasena" id="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input class="form-control" type="text" name="nombre" id="">
+                    </div>
+                    <div class="form-group">
+                        <label>Edad</label>
+                        <input class="form-control" type="text" name="edad" id="">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group">
+                        <label>Correo</label>
+                        <input class="form-control" type="email" name="correo" id="">
+                    </div>
+                    </div> 
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block">
+                            Modificar
+                        </button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h1>
+                    Modificar Usuarios
+                </h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">nombre</th>
+                            <th scope="col">usuario</th>
+                            <th scope="col">contraseña</th>
+                            <th scope="col">edad</th>
+                            <th scope="col">genero</th>
+                            <th scope="col">#</th>
+                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each usua}}
+                            <tr>
+                            <th scope="row">{{id}}</th>
+                            <td>{{nombre}}</td>
+                            <td>{{usuario}}</td>
+                            <td>{{contrasena}}</td>
+                            <td>{{edad}}</td>
+                            <td>{{correo}}</td>
+                            <td>
+                                <a href="delete/{{id}}" class="far fa-trash-alt btn btn-danger"></a>
+                                <a href="/links/add" class="btn btn-dark">agregar</a>
+                            </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                        
+                    </table>
+            </div>
+        </div> 
+    </div>
+</div>

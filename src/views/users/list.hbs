@@ -1,0 +1,57 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Usuarios </h1>
+  <p class="mb-4">Usuarios del sistemas</a>.</p>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    	<a href="usuario/add" class="btn btn-success">Nuevo</a>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Email</th>
+              <th>Telefono</th>
+              <th>Usuario</th>
+              <th>::</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Email</th>
+              <th>Telefono</th>
+              <th>Usuario</th>
+              <th>::</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            {{#each usuario}}
+            <tr>
+              <td>{{nombre}}</td>
+              <td>{{apellido}}</td>
+              <td>{{email}}</td>
+              <td>{{telefono}}</td>
+              <td>{{usuario}}</td>
+              <td>
+    						<a href="usuario/delete/{{id}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+    						<a href="usuario/update/{{id}}" class="btn btn-info"><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /.container-fluid -->

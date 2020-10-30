@@ -1,0 +1,71 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Empresa Taller</h1>
+  <p class="mb-4">
+
+    TALLER
+
+    Nombre:
+    alias:
+    direccion:
+    telefono:
+    ciudad:
+    contacto:
+
+    ojo que tambien se pueden poner las aseguradoras y servitecas para la revision tecnicomecanoca</a>.</p>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    	<a href="taller/add" class="btn btn-success">Nuevo</a>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Alias</th>
+              <th>Direccion</th>
+              <th>Telefono</th>
+              <th>Ciudad</th>
+              <th>Contacto</th>
+              <th>::</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Nombre</th>
+              <th>Alias</th>
+              <th>Direccion</th>
+              <th>Telefono</th>
+              <th>Ciudad</th>
+              <th>Contacto</th>
+              <th>::</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            {{#each taller}}
+            <tr>
+              <td>{{nombre}}</td>
+              <td>{{alias}}</td>
+              <td>{{direccion}}</td>
+              <td>{{telefono}}</td>
+              <td>{{ciudad}}</td>
+              <td>{{contacto}}</td>
+              <td>
+                <a href="taller/delete/{{id}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                <a href="taller/update/{{id}}" class="btn btn-info"><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /.container-fluid -->

@@ -1,0 +1,50 @@
+<div class="card o-hidden border-0 shadow-lg my-5">
+  <div class="card-body p-0">
+    <!-- Nested Row within Card Body -->
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="p-5">
+          <div class="text-center">
+            <h1 class="h4 text-gray-900 mb-4">Crear Taller o Concesionario</h1>
+          </div>
+          <form class="user" action="" method="post">
+            <div class="form-group row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="text" name="nombre" value="{{#taller}}{{nombre}}{{/taller}}" class="form-control form-control-user" id="exampleInputPassword" placeholder="Nombre">
+              </div>
+              <div class="col-sm-6">
+                <input type="text" name="alias" value="{{#taller}}{{alias}}{{/taller}}" class="form-control form-control-user" id="exampleLastName" placeholder="Alias">
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" name="direccion" value="{{#taller}}{{direccion}}{{/taller}}" class="form-control form-control-user" id="exampleInputEmail" placeholder="Direccion">
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="text" name="ciudad" value="{{#taller}}{{ciudad}}{{/taller}}" class="form-control form-control-user" id="exampleInputPassword" placeholder="Ciudad">
+              </div>
+              <div class="col-sm-6">
+                <input type="number" name="telefono" value="{{#taller}}{{telefono}}{{/taller}}" class="form-control form-control-user" id="exampleLastName" placeholder="Telefono">
+              </div>
+            </div>
+            <div class="form-group">
+                <input type="text" name="contacto" value="{{#taller}}{{contacto}}{{/taller}}" class="form-control form-control-user" id="exampleInputPassword" placeholder="Contacto">
+            </div>
+            <button type="submit" class="btn btn-primary btn-user btn-block">
+              {{#if taller}}
+                Modificar
+              {{else}}
+                Guardar
+              {{/if}}
+            </button>
+            <hr>
+          </form>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,70 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Revisión Tecnicomecanica </h1>
+  <p class="mb-4">
+
+    histotial de reviciones tecnicomecanicas
+
+    arriba para ingresar la revision
+
+    serviteca o como se llame:
+    fecha de vencimiento:
+    valor:
+    contacto:
+    onservaciones:
+
+
+
+    abajo la lista de los reviciones tecnicomecanicas que ha tenido y el vigente</a>.</p>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    	<a href="/tecmeca/add" class="btn btn-success">Nuevo</a>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>CDA</th>
+              <th>Fecha Inicio</th>
+              <th>Contacto</th>
+              <th>Precio</th>
+              <th>Obsevaciones</th>
+              <th>::</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>CDA</th>
+              <th>Fecha Inicio</th>
+              <th>Contacto</th>
+              <th>Precio</th>
+              <th>Obsevaciones</th>
+              <th>::</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            {{#each tecmeca}}
+            <tr>
+              <td>{{empresa}}</td>
+              <td>{{fecha_inicio}}</td>
+              <td>{{contacto}}</td>
+              <td>${{number precio}}</td>
+              <td>{{observaciones}}</td>
+              <td>
+                <a href="tecmeca/delete/{{id}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                <a href="tecmeca/update/{{id}}" class="btn btn-info"><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.container-fluid -->

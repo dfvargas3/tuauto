@@ -1,0 +1,72 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Empresa Proveedor</h1>
+  <p class="mb-4">
+
+    Nombre empresa, consecionario, aire acondicionado, 
+    serviteca, electrico, repuestos, etc.
+
+    Nombre:
+    alias:
+    direccion:
+    telefono:
+    ciudad:
+    contacto:
+
+    ojo que tambien se pueden poner las aseguradoras y servitecas para la revision tecnicomecanoca</a>.</p>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    	<a href="/empresa/add" class="btn btn-success">Nuevo</a>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Direccion</th>
+              <th>Telefono</th>
+              <th>Ciduad</th>
+              <th>Obsevaciones</th>
+              <th>::</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Direccion</th>
+              <th>Telefono</th>
+              <th>Ciduad</th>
+              <th>Obsevaciones</th>
+              <th>::</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            {{#each empresa}}
+            <tr>
+              <td>{{nombre}}</td>
+              <td>{{tipodeempresa}}</td>
+              <td>{{direccion}}</td>
+              <td>{{telefono}}</td>
+              <td>{{ciudad}}</td>
+              <td>{{observaciones}}</td>
+              <td>
+                <a href="empresa/delete/{{id}}" class="btn btn-danger" alt="Eliminar"><i class="fas fa-trash"></i></a>
+                <a href="empresa/update/{{id}}" class="btn btn-info"><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /.container-fluid -->

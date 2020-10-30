@@ -1,0 +1,71 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Vehiculos</h1>
+  <p class="mb-4">
+
+    datos del vehiculo 
+
+    placa:
+    opcional -> agregar datos del vehiculo (marca, color, motor, chasis, etc)
+
+    soat:
+    tecnico mecanica:
+    todo riesgo:
+
+
+    SE PUEDEN AGREGAR MAS VEHICULOS POR SI TIENE MAS DE UNO</a>.</p>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+    	<a href="vehiculo/add" class="btn btn-success">Nuevo</a>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Placa</th>
+              <th>Marca</th>
+              <th>Color</th>
+              <th>Alias</th>
+              <th>Obsevaciones</th>
+              <th>::</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Tipo</th>
+              <th>Placa</th>
+              <th>Marca</th>
+              <th>Color</th>
+              <th>Alias</th>
+              <th>Obsevaciones</th>
+              <th>::</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            {{#each vehiculo}}
+            <tr>
+              <td>{{tipo}}</td>
+              <td>{{placa}}</td>
+              <td>{{marca}}</td>
+              <td>{{color}}</td>
+              <td>{{alias}}</td>
+              <td>{{observaciones}}</td>
+              <td>
+                <a href="vehiculo/delete/{{id}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                <a href="vehiculo/update/{{id}}" class="btn btn-info"><i class="fas fa-edit"></i></a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.container-fluid -->
